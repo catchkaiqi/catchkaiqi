@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="I turn coffee :coffee: into code, use tabs over spaces and never broke production.">
+
+  <title>portfolYOU</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/portfolYOU/assets/favicon.ico">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" type="text/css"/>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/portfolYOU/assets/css/style.css" type="text/css">
+
+</head>
+
+
+<body class="d-flex flex-column h-100">
+
+  <main class="flex-shrink-0 container mt-5">
+  <nav class="navbar navbar-expand-lg navbar-light">
+
+  <a class="navbar-brand" href="/portfolYOU/"><h5><b>portfolYOU</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+<a class="nav-item nav-link " href="/portfolYOU/projects/">Projects</a>
+
+      <a class="nav-item nav-link active" href="/portfolYOU/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/portfolYOU/about/">About</a>
+
+      
+
+    </div>
+  </div>
+
+</nav>
+  <div class="col-lg-10 mx-auto mt-5 post">
+  <h1><b>Cat vs Non-cat Image Classification</b></h1>
+
+<p class="post-metadata text-muted">
+  10 August 2019 -  
+  <b>less than 1 min read time</b>
+
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/portfolYOU/blog/tags#classification">
+      <span class="tag badge badge-pill text-primary border border-primary">Classification</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/portfolYOU/blog/tags#neural-network">
+      <span class="tag badge badge-pill text-primary border border-primary">Neural Network</span>
+    </a>
+    </p>
+
+<p>In this assignment, I built an L-layer deep neural network for image classification. For here, L can be any integer greater than 0. In this case, I picked L as 5 and achieved training accuracy as 100% and test accuracy as 84% to differentiate cat and non-cat images.
+Here is the representation of an L-layer deep neural network.</p>
+<figure class="figure w-100">
+  <img src="../assets/img/neuralnetworkrep.jpg" class="figure-img img-fluid rounded" alt="iOS"><figcaption class="figure-caption text-center">iOS</figcaption></figure>
+<figure class="figure w-100">
+  <img src="../assets/img/neuralnetworkrep2.jpg" class="figure-img img-fluid rounded" alt="iOS"><figcaption class="figure-caption text-center">iOS</figcaption></figure>
+
+<p>The general deep learning methodology to build the model is as the following:</p>
+<ol>
+  <li>Initialize parameters / Define hyperparameters</li>
+  <li>Loop for num_iterations:
+    a. Forward propagation
+    b. Compute cost function
+    c. Backward propagation
+    d. Update parameters (using parameters, and grads from backprop)</li>
+  <li>Use trained parameters to predict labels
+Here is the output of the cross-entropy cost after 2400 iterations.</li>
+</ol>
+
+<figure class="figure w-100">
+  <img src="../assets/img/blogcatresult.jpg" class="figure-img img-fluid rounded" alt="iOS"><figcaption class="figure-caption text-center">iOS</figcaption></figure>
+
+<p>The 5-layer neural network has test accuracy (84%) than your 2-layer neural network (72%) on the same test set.
+Here is an example testing with a cat image.</p>
+
+<figure class="figure w-100">
+  <img src="../assets/img/blogcattestimg.jpg" class="figure-img img-fluid rounded" alt="iOS"><figcaption class="figure-caption text-center">iOS</figcaption></figure>
+
+
+
+</div>
+  </main>
+
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>John Doe</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center">
+<a class="social mx-1" href="https://www.behance.net/your_username" style="color: #6c757d" onmouseover="this.style.color='#1769ff'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-behance fa-1x"></i>
+    </a><a class="social mx-1" href="mailto:username@domain.com" style="color: #6c757d" onmouseover="this.style.color='#db4437'" onmouseout="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.facebook.com/your_username" style="color: #6c757d" onmouseover="this.style.color='#3b5998'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.github.com/your_username" style="color: #6c757d" onmouseover="this.style.color='#333333'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.linkedin.com/in/your_username" style="color: #6c757d" onmouseover="this.style.color='#007bb5'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a><a class="social mx-1" href="https://medium.com/@your_username" style="color: #6c757d" onmouseover="this.style.color='#00ab6c'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-medium fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.twitter.com/your_username" style="color: #6c757d" onmouseover="this.style.color='#1da1f2'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-twitter fa-1x"></i>
+    </a>
+
+</div>
+<small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+  
+</footer>
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+</body>
+
+</html>
