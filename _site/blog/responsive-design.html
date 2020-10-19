@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="I turn coffee :coffee: into code, use tabs over spaces and never broke production.">
+
+  <title>portfolYOU</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/portfolYOU/assets/favicon.ico">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" type="text/css"/>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/portfolYOU/assets/css/style.css" type="text/css">
+
+</head>
+
+
+<body class="d-flex flex-column h-100">
+
+  <main class="flex-shrink-0 container mt-5">
+  <nav class="navbar navbar-expand-lg navbar-light">
+
+  <a class="navbar-brand" href="/portfolYOU/"><h5><b>portfolYOU</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+<a class="nav-item nav-link " href="/portfolYOU/projects/">Projects</a>
+
+      <a class="nav-item nav-link active" href="/portfolYOU/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/portfolYOU/about/">About</a>
+
+      
+
+    </div>
+  </div>
+
+</nav>
+  <div class="col-lg-10 mx-auto mt-5 post">
+  <h1><b>Responsive Design</b></h1>
+
+<p class="post-metadata text-muted">
+  14 August 2020 -  
+  <b>2 mins read time</b>
+
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/portfolYOU/blog/tags#css">
+      <span class="tag badge badge-pill text-primary border border-primary">CSS</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/portfolYOU/blog/tags#html">
+      <span class="tag badge badge-pill text-primary border border-primary">HTML</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/portfolYOU/blog/tags#web-development">
+      <span class="tag badge badge-pill text-primary border border-primary">Web Development</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/portfolYOU/blog/tags#responsive-design">
+      <span class="tag badge badge-pill text-primary border border-primary">Responsive Design</span>
+    </a>
+    </p>
+
+<figure class="figure w-100">
+  <img src="../assets/img/blogresponsive.jpg" class="figure-img img-fluid rounded" alt="iOS"><figcaption class="figure-caption text-center">iOS</figcaption></figure>
+
+<p>Some real world responsive design examples</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>html,
+body {
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Space Mono", sans-serif;
+  font-size: 18px;
+  line-height: 1.4em;
+  color: GhostWhite;
+}
+
+body {
+  background-image: url("../img/space.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/* Title and Description */
+
+.page-title {
+  text-align: center;
+  margin: auto;
+  line-height: 2em;
+}
+
+.logo {
+  height: 80px;
+  width: 80px;
+  background-image: url("../img/spaceship.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+  top: 1em;
+}
+
+.page-title h1 {
+  display: inline-block;
+}
+
+.main {
+  text-align: center;
+}
+
+.page-description {
+  font-size: 0.8rem;
+  padding: 30px;
+}
+
+.learn-more {
+  color: DarkOrange;
+  text-decoration: none;
+  display: block;
+  margin: 25px 0 0 0;
+  font-weight: bold;
+}
+
+/* Gallery */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  margin: 20px;
+}
+
+.gallery-item .thumbnail {
+  width: 240px;
+  border: 2px solid GhostWhite;
+  border-radius: 4px;
+}
+
+/* Footer Navigation */
+
+nav {
+  margin-top: 30px;
+}
+
+nav ul {
+  display: block;
+}
+
+nav li {
+  display: inline;
+  margin: 0 20px 0 0;
+  color: GhostWhite;
+}
+
+nav a {
+  line-height: 60px;
+  border: 1px solid GhostWhite;
+  padding: 7px;
+  border-radius: 4px;
+  color: DarkOrange;
+  text-decoration: none;
+}
+
+.contact-btn {
+  cursor: pointer;
+  margin: 20px 30px;
+  text-align: center;
+}
+
+.contact-btn a:active {
+  position: relative;
+  bottom: 2px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px), (orientation: portrait) {
+    /* ruleset for 320px - 480px */
+  .gallery-item .thumbnail {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-resolution: 150dpi) {
+    /* CSS for high resolution screens */
+  .logo {
+    background-image: url("../img/spaceship@2x.png");
+  }
+}
+
+@media only screen and (max-resolution: 150dpi) and (max-width: 480px) {
+    /* CSS ruleset */
+  .page-description {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 480px), (orientation: landscape) {
+    /* CSS ruleset */
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* CSS ruleset */
+  .page-title, .page-description {
+    float: left;
+    width: 20em;
+  }
+
+  .page-description {
+    text-align: left;
+  }
+}
+
+</code></pre></div></div>
+
+<h2 id="sizing-elements">Sizing Elements</h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* Universal Styles */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: white;
+}
+
+.image-container {
+  overflow: hidden;
+
+}
+
+.image-container img {
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Banner Section */
+
+#banner {
+  height: 46rem;
+  background-image: url('camel-background.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#banner h1 {
+  font-size: 3.75rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: white;
+}
+
+/* Blog Post */
+p {
+  min-width: 200px;
+  min-height: 200px;
+}
+#blog {
+  width: 86%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#blog .post {
+  margin-bottom: 7.5%;
+  margin-top: 12.5%;
+  width: 52%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.8;
+  color: #444444;
+}
+
+.post h2 {
+  font-size: 1.875rem;
+  
+}
+
+.post h3 {
+  font-size: 1.125rem;
+  color: #999999;
+}
+
+.post .opening-line {
+  margin-top: 4.1875rem;
+  margin-bottom: 1.5rem;
+  color: black;
+  font-weight: bold;
+}
+
+.post .image-container {
+  width: 100%;
+}
+
+/* Blog Images */
+
+.images {
+  margin-bottom: 20%;
+}
+
+.images .image-container {
+  display: inline-block;
+  width: 50%;
+}
+
+/* Footer */
+
+footer {
+  padding: 4rem 0;
+  border-top: 1px solid #999999;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  color: #999999;
+  text-align: center;
+}
+
+</code></pre></div></div>
+
+
+
+</div>
+  </main>
+
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Kaiqi Cheng</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center">
+<a class="social mx-1" href="https://www.behance.net/your_username" style="color: #6c757d" onmouseover="this.style.color='#1769ff'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-behance fa-1x"></i>
+    </a><a class="social mx-1" href="mailto:catchkaiqi@gmail.com" style="color: #6c757d" onmouseover="this.style.color='#db4437'" onmouseout="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.facebook.com/your_username" style="color: #6c757d" onmouseover="this.style.color='#3b5998'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.github.com/catchcheng" style="color: #6c757d" onmouseover="this.style.color='#333333'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.linkedin.com/in/your_username" style="color: #6c757d" onmouseover="this.style.color='#007bb5'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a><a class="social mx-1" href="https://medium.com/@your_username" style="color: #6c757d" onmouseover="this.style.color='#00ab6c'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-medium fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.twitter.com/your_username" style="color: #6c757d" onmouseover="this.style.color='#1da1f2'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-twitter fa-1x"></i>
+    </a>
+
+</div>
+<small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+  
+</footer>
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+</body>
+
+</html>

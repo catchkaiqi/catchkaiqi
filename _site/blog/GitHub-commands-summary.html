@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="I turn coffee :coffee: into code, use tabs over spaces and never broke production.">
+
+  <title>portfolYOU</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/portfolYOU/assets/favicon.ico">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" type="text/css"/>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/portfolYOU/assets/css/style.css" type="text/css">
+
+</head>
+
+
+<body class="d-flex flex-column h-100">
+
+  <main class="flex-shrink-0 container mt-5">
+  <nav class="navbar navbar-expand-lg navbar-light">
+
+  <a class="navbar-brand" href="/portfolYOU/"><h5><b>portfolYOU</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+<a class="nav-item nav-link " href="/portfolYOU/projects/">Projects</a>
+
+      <a class="nav-item nav-link active" href="/portfolYOU/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/portfolYOU/about/">About</a>
+
+      
+
+    </div>
+  </div>
+
+</nav>
+  <div class="col-lg-10 mx-auto mt-5 post">
+  <h1><b>GitHub Commands Summary</b></h1>
+
+<p class="post-metadata text-muted">
+  01 January 2019 -  
+  <b>3 mins read time</b>
+
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/portfolYOU/blog/tags#github">
+      <span class="tag badge badge-pill text-primary border border-primary">GitHub</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/portfolYOU/blog/tags#git">
+      <span class="tag badge badge-pill text-primary border border-primary">Git</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/portfolYOU/blog/tags#terminal">
+      <span class="tag badge badge-pill text-primary border border-primary">Terminal</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/portfolYOU/blog/tags#commands">
+      <span class="tag badge badge-pill text-primary border border-primary">Commands</span>
+    </a>
+    </p>
+
+<h2 id="commonly-used-commands">Commonly-used commands</h2>
+
+<p>git log</p>
+
+<p>git diff (commit id) (commit id)</p>
+
+<p>git diff: give u difference of staging area and the working directory</p>
+
+<p>git diff –staged: give u difference between the staging area and the repository</p>
+
+<p>To get colored diff output, run git config –global color.ui auto</p>
+
+<p>git log –stat: give some statistics about which files have changed in each commit.</p>
+
+<p>git clone http://github.com/udacity/asteroids.git</p>
+
+<p>git checkout commit id</p>
+
+<p>To restore a previous version</p>
+
+<p>git reset –hard: discards any changes in either the working directory or the staging area</p>
+
+<p>mv from_directory to_directory</p>
+
+<h2 id="creating-a-repository">creating a repository</h2>
+<p>first go to a file directory</p>
+
+<p>git init</p>
+
+<p>git status: show which files have changed since the last commit</p>
+
+<p>git add filename.txt: add a file to the staging area</p>
+
+<p>git reset filename.txt: the file will be removed from the staging area, but it will still be in your working directory</p>
+
+<h2 id="git-commit">Git commit</h2>
+<p>A commit is a snapshot of a Git repository</p>
+
+<p>git commit -m “Commit message - write a commit message</p>
+
+<p>first git checkout master, then commit, then the HEAD isn’t detached, and commit goes directly to the master branch</p>
+
+<h2 id="branch">Branch</h2>
+
+<p>git branch: list all branches</p>
+
+<p>git branch new_branch_name: create a new branch with the new name</p>
+
+<p>git checkout new_branch_name: goes to new branch</p>
+
+<p>git log –graph –oneline master coins: see the visual representation of the commit history of master branch and coins branch</p>
+
+<p>git checkout –b new_branch_name: create a branch and checkout there</p>
+
+<p>git gc: manual garbage collection (automatical)</p>
+
+<h2 id="merge">Merge</h2>
+
+<p>git merge branch_1 branch_2: merge branch_2 into branch_1</p>
+
+<p>git show commit_id: show difference of the commit and its parent commit</p>
+
+<p>git branch –d coins: delete the branch “coins”</p>
+
+<p>git branch –a: show all branches, including origin/HEAD</p>
+
+<h2 id="what-is-a-readme">What is a README?</h2>
+<p>Many projects contain a file named “README” that gives a general description of what the project does and how to use it.
+Initialize this repository with a README: when creating a repository before I had created any content</p>
+
+<h2 id="remote">Remote</h2>
+<p>git remote: show current remote</p>
+
+<p>git remote add origin https://github.com/catchcheng/reflections.git</p>
+
+<p>add the url repository as a remote, with the name “origin”</p>
+
+<p>git remote –v: output more info, shows both the url where I’d fetch data from, and the url I’d push data to</p>
+
+<p>git remote set-url origin https://github.com/catchcheng/reflections.git: change remote to</p>
+
+<p>git push origin master: push the master branch to the remote, so in the url, u’ll find a master branch there</p>
+
+<p>git pull origin master: pull the master branch of the remote to the current branch</p>
+
+<p>the local master will change, however, the working directory and staging area will also update when you run git pull</p>
+
+<p>git fetch: if there are changes locally and remotely, then this will update origin master branch to the remote repository, instead of the local master branch.</p>
+
+<p>git pull origin master = git fetch origin + git merge master origin/master</p>
+
+<p>Fast-forward merges, merge b into a is a fast-forward merge if a is b’s ancestor.</p>
+
+<h3 id="git-errors-and-warnings-solution">Git Errors and Warnings Solution</h3>
+<h5 id="should-not-be-doing-an-octopus">Should not be doing an octopus</h5>
+
+<p>Octopus is a strategy Git uses to combine many different versions of code together. This message can appear if you try to use this strategy in an inappropriate situation.</p>
+
+<h5 id="you-are-in-detached-head-state">You are in ‘detached HEAD’ state</h5>
+<p>HEAD is what Git calls the commit you are currently on. You can “detach” the HEAD by switching to a previous commit, which we’ll see in the next video. Despite what it sounds like, it’s actually not a bad thing to detach the HEAD. Git just warns you so that you’ll realize you’re doing it.</p>
+
+<h4 id="panic-the-impossible-happened">Panic! (the ‘impossible’ happened)</h4>
+<p>This is a real error message, but it’s not output by Git. Instead it’s output by GHC, the compiler for a programming language called Haskell. It’s reserved for particularly surprising errors!</p>
+
+
+
+
+</div>
+  </main>
+
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Kaiqi Cheng</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center">
+<a class="social mx-1" href="https://www.behance.net/your_username" style="color: #6c757d" onmouseover="this.style.color='#1769ff'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-behance fa-1x"></i>
+    </a><a class="social mx-1" href="mailto:catchkaiqi@gmail.com" style="color: #6c757d" onmouseover="this.style.color='#db4437'" onmouseout="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.facebook.com/your_username" style="color: #6c757d" onmouseover="this.style.color='#3b5998'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.github.com/catchcheng" style="color: #6c757d" onmouseover="this.style.color='#333333'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.linkedin.com/in/your_username" style="color: #6c757d" onmouseover="this.style.color='#007bb5'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a><a class="social mx-1" href="https://medium.com/@your_username" style="color: #6c757d" onmouseover="this.style.color='#00ab6c'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-medium fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.twitter.com/your_username" style="color: #6c757d" onmouseover="this.style.color='#1da1f2'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-twitter fa-1x"></i>
+    </a>
+
+</div>
+<small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+  
+</footer>
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+</body>
+
+</html>

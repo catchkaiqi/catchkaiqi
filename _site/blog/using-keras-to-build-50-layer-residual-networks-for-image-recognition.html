@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="I turn coffee :coffee: into code, use tabs over spaces and never broke production.">
+
+  <title>portfolYOU</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/portfolYOU/assets/favicon.ico">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" type="text/css"/>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/portfolYOU/assets/css/style.css" type="text/css">
+
+</head>
+
+
+<body class="d-flex flex-column h-100">
+
+  <main class="flex-shrink-0 container mt-5">
+  <nav class="navbar navbar-expand-lg navbar-light">
+
+  <a class="navbar-brand" href="/portfolYOU/"><h5><b>portfolYOU</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+<a class="nav-item nav-link " href="/portfolYOU/projects/">Projects</a>
+
+      <a class="nav-item nav-link active" href="/portfolYOU/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/portfolYOU/about/">About</a>
+
+      
+
+    </div>
+  </div>
+
+</nav>
+  <div class="col-lg-10 mx-auto mt-5 post">
+  <h1><b>Using Keras to build 50-layer Residual Networks for Image Recognition</b></h1>
+
+<p class="post-metadata text-muted">
+  15 February 2020 -  
+  <b>2 mins read time</b>
+
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/portfolYOU/blog/tags#cnn">
+      <span class="tag badge badge-pill text-primary border border-primary">CNN</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/portfolYOU/blog/tags#keras">
+      <span class="tag badge badge-pill text-primary border border-primary">Keras</span>
+    </a>
+    </p>
+
+<p>Keras was developed to enable deep learning engineers to build and experiment with different models very quickly. Just as TensorFlow is a higher-level framework than Python, Keras is an even higher-level framework and provides additional abstractions. Being able to go from idea to result with the least possible delay is key to finding good models. However, Keras is more restrictive than the lower-level frameworks, so there are some very complex models that you can implement in TensorFlow but not (without more difficulty) in Keras. That being said, Keras will work fine for many common models.
+In this assignment, I built ResNet model with 50 layers. The following figure describes in detail the architecture of this neural network.</p>
+<figure class="figure w-100">
+  <img src="../assets/img/blogusingkeras.jpg" class="figure-img img-fluid rounded" alt="iOS"><figcaption class="figure-caption text-center">iOS</figcaption></figure>
+
+<p>The details of this ResNet-50 model are:</p>
+<ul>
+  <li>Zero-padding pads the input with a pad of (3,3)</li>
+  <li>Stage 1:
+1	The 2D Convolution has 64 filters of shape (7,7) and uses a stride of (2,2). Its name is “conv1”.
+2	BatchNorm is applied to the channels axis of the input.
+3	MaxPooling uses a (3,3) window and a (2,2) stride.</li>
+  <li>Stage 2:
+1	The convolutional block uses three set of filters of size [64,64,256], “f” is 3, “s” is 1 and the block is “a”.
+2	The 2 identity blocks use three set of filters of size [64,64,256], “f” is 3 and the blocks are “b” and “c”.</li>
+  <li>Stage 3:</li>
+  <li>The convolutional block uses three set of filters of size [128,128,512], “f” is 3, “s” is 2 and the block is “a”.</li>
+  <li>The 3 identity blocks use three set of filters of size [128,128,512], “f” is 3 and the blocks are “b”, “c” and “d”.</li>
+  <li>Stage 4:</li>
+  <li>The convolutional block uses three set of filters of size [256, 256, 1024], “f” is 3, “s” is 2 and the block is “a”.</li>
+  <li>The 5 identity blocks use three set of filters of size [256, 256, 1024], “f” is 3 and the blocks are “b”, “c”, “d”, “e” and “f”.</li>
+  <li>Stage 5:
+1	The convolutional block uses three set of filters of size [512, 512, 2048], “f” is 3, “s” is 2 and the block is “a”.
+2	The 2 identity blocks use three set of filters of size [256, 256, 2048], “f” is 3 and the blocks are “b” and “c”.</li>
+  <li>The 2D Average Pooling uses a window of shape (2,2) and its name is “avg_pool”.</li>
+  <li>The flatten doesn’t have any hyperparameters or name.</li>
+  <li>The Fully Connected (Dense) layer reduces its input to the number of classes using a softmax activation. Its name should be ‘fc’ + str(classes).
+After building the ResNet model, we can import any dataset for some image recognition.</li>
+</ul>
+
+
+
+
+</div>
+  </main>
+
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Kaiqi Cheng</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center">
+<a class="social mx-1" href="https://www.behance.net/your_username" style="color: #6c757d" onmouseover="this.style.color='#1769ff'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-behance fa-1x"></i>
+    </a><a class="social mx-1" href="mailto:catchkaiqi@gmail.com" style="color: #6c757d" onmouseover="this.style.color='#db4437'" onmouseout="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.facebook.com/your_username" style="color: #6c757d" onmouseover="this.style.color='#3b5998'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.github.com/catchcheng" style="color: #6c757d" onmouseover="this.style.color='#333333'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.linkedin.com/in/your_username" style="color: #6c757d" onmouseover="this.style.color='#007bb5'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a><a class="social mx-1" href="https://medium.com/@your_username" style="color: #6c757d" onmouseover="this.style.color='#00ab6c'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-medium fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.twitter.com/your_username" style="color: #6c757d" onmouseover="this.style.color='#1da1f2'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-twitter fa-1x"></i>
+    </a>
+
+</div>
+<small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+  
+</footer>
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+</body>
+
+</html>

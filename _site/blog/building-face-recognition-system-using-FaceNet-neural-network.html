@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="I turn coffee :coffee: into code, use tabs over spaces and never broke production.">
+
+  <title>portfolYOU</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/portfolYOU/assets/favicon.ico">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" type="text/css"/>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/portfolYOU/assets/css/style.css" type="text/css">
+
+</head>
+
+
+<body class="d-flex flex-column h-100">
+
+  <main class="flex-shrink-0 container mt-5">
+  <nav class="navbar navbar-expand-lg navbar-light">
+
+  <a class="navbar-brand" href="/portfolYOU/"><h5><b>portfolYOU</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+<a class="nav-item nav-link " href="/portfolYOU/projects/">Projects</a>
+
+      <a class="nav-item nav-link active" href="/portfolYOU/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/portfolYOU/about/">About</a>
+
+      
+
+    </div>
+  </div>
+
+</nav>
+  <div class="col-lg-10 mx-auto mt-5 post">
+  <h1><b>Building Face Recognition System Using FaceNet Neural Network</b></h1>
+
+<p class="post-metadata text-muted">
+  21 July 2020 -  
+  <b>2 mins read time</b>
+
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/portfolYOU/blog/tags#facenet">
+      <span class="tag badge badge-pill text-primary border border-primary">FaceNet</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/portfolYOU/blog/tags#cnn">
+      <span class="tag badge badge-pill text-primary border border-primary">CNN</span>
+    </a>
+    </p>
+
+<p>Face recognition problems commonly fall into two categories:</p>
+<ul>
+  <li>Face Verification - “is this the claimed person?”. For example, at some airports, you can pass through customs by letting a system scan your passport and then verifying that you (the person carrying the passport) are the correct person. A mobile phone that unlocks using your face is also using face verification. This is a 1:1 matching problem. </li>
+  <li>Face Recognition - “who is this person?”. For example, when employees enter the office without needing to otherwise identify themselves. This is a 1:K matching problem.
+The FaceNet learns a neural network (Inception model) that encodes a face image into a vector of 128 numbers. It is pretrained and we can just define the cost function and load the weights. 
+For Face Verification, I compared the distance of two vectors to determine if two pictures are of the same person.</li>
+</ul>
+<figure class="figure w-100">
+  <img src="../assets/img/blogbuildingface.jpg" class="figure-img img-fluid rounded" alt="iOS"><figcaption class="figure-caption text-center">iOS</figcaption></figure>
+<p>So, an encoding is a good one if:
+1	The encodings of two images of the same person are quite similar to each other 
+2	The encodings of two images of different persons are very different
+For Face Recognition, I implemented a system that takes as input an image, and figures out if it is one of the authorized persons (and if so, who). Unlike the previous face verification system, we will no longer get a person’s name as another input.
+This function computes the target encoding of the image and loops over the database dictionary’s names and encodings to compute L2 distance between the target “encoding” and the current “encoding” from the database. If the distance is less than min_dist, then set min_dist to dist, and identity to name.
+ 
+Here’re some ways to further improve the algorithm:</p>
+<ul>
+  <li>Put more images of each person (under different lighting conditions, taken on different days, etc.) into the database. Then given a new image, compare the new face to multiple pictures of the person. This would increae accuracy.</li>
+  <li>Crop the images to just contain the face, and less of the “border” region around the face. This preprocessing removes some of the irrelevant pixels around the face, and also makes the algorithm more robust.
+ 
+1	Face verification solves an easier 1:1 matching problem; face recognition addresses a harder 1:K matching problem. 
+2	The triplet loss is an effective loss function for training a neural network to learn an encoding of a face image.
+3	The same encoding can be used for verification and recognition. Measuring distances between two images’ encodings allows you to determine whether they are pictures of the same person. 
+ 
+REFERENCES:</li>
+  <li>Florian Schroff, Dmitry Kalenichenko, James Philbin (2015). FaceNet: A Unified Embedding for Face Recognition and Clustering</li>
+  <li>Yaniv Taigman, Ming Yang, Marc’Aurelio Ranzato, Lior Wolf (2014). DeepFace: Closing the gap to human-level performance in face verification</li>
+  <li>The pretrained model we use is inspired by Victor Sy Wang’s implementation and was loaded using his code: https://github.com/iwantooxxoox/Keras-OpenFace.
+Our implementation also took a lot of inspiration from the official FaceNet github repository: https://github.com/davidsandberg/facenet</li>
+</ul>
+
+
+
+</div>
+  </main>
+
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Kaiqi Cheng</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center">
+<a class="social mx-1" href="https://www.behance.net/your_username" style="color: #6c757d" onmouseover="this.style.color='#1769ff'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-behance fa-1x"></i>
+    </a><a class="social mx-1" href="mailto:catchkaiqi@gmail.com" style="color: #6c757d" onmouseover="this.style.color='#db4437'" onmouseout="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.facebook.com/your_username" style="color: #6c757d" onmouseover="this.style.color='#3b5998'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.github.com/catchcheng" style="color: #6c757d" onmouseover="this.style.color='#333333'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.linkedin.com/in/your_username" style="color: #6c757d" onmouseover="this.style.color='#007bb5'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a><a class="social mx-1" href="https://medium.com/@your_username" style="color: #6c757d" onmouseover="this.style.color='#00ab6c'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-medium fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.twitter.com/your_username" style="color: #6c757d" onmouseover="this.style.color='#1da1f2'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-twitter fa-1x"></i>
+    </a>
+
+</div>
+<small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+  
+</footer>
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+</body>
+
+</html>

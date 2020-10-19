@@ -1,6 +1,86 @@
 [
   
     {
+      "title"    : "Speech Recognition - Trigger Word Detection",
+      "category" : "",
+      "tags"     : "Speech Recognition, CNN, Keras",
+      "url"      : "/portfolYOU/blog/speech-recognition-trigger-word-detection",
+      "date"     : "2020-09-22 00:00:00 -0400"
+    } ,
+  
+    {
+      "title"    : "Neural Machine Translation Using an Attention Model",
+      "category" : "",
+      "tags"     : "Machine Translation, Clean Code",
+      "url"      : "/portfolYOU/blog/neural-machine-translation-using-an-attention-model",
+      "date"     : "2020-09-07 00:00:00 -0400"
+    } ,
+  
+    {
+      "title"    : "Responsive Design",
+      "category" : "",
+      "tags"     : "CSS, HTML, Web Development, Responsive Design",
+      "url"      : "/portfolYOU/blog/responsive-design",
+      "date"     : "2020-08-14 00:00:00 -0400"
+    } ,
+  
+    {
+      "title"    : "Using Word Vector Representations to Build an Emojifier",
+      "category" : "",
+      "tags"     : "Word Vector, LSTM",
+      "url"      : "/portfolYOU/blog/using-word-vector-representations-to-build-an-emojifier",
+      "date"     : "2020-08-03 00:00:00 -0400"
+    } ,
+  
+    {
+      "title"    : "Building Face Recognition System Using FaceNet Neural Network",
+      "category" : "",
+      "tags"     : "FaceNet, CNN",
+      "url"      : "/portfolYOU/blog/building-face-recognition-system-using-FaceNet-neural-network",
+      "date"     : "2020-07-21 00:00:00 -0400"
+    } ,
+  
+    {
+      "title"    : "Autonomous driving - Car detection by YOLO Model",
+      "category" : "",
+      "tags"     : "YOLO, CNN",
+      "url"      : "/portfolYOU/blog/autonomous-driving-car-detection-by-YOLO-model",
+      "date"     : "2020-05-10 00:00:00 -0400"
+    } ,
+  
+    {
+      "title"    : "Shakespeare Poem Generator with Keras",
+      "category" : "",
+      "tags"     : "Keras, LSTM",
+      "url"      : "/portfolYOU/blog/shakespeare-poem-generator-with-keras",
+      "date"     : "2020-03-27 00:00:00 -0400"
+    } ,
+  
+    {
+      "title"    : "Using Keras to build 50-layer Residual Networks for Image Recognition",
+      "category" : "",
+      "tags"     : "CNN, Keras",
+      "url"      : "/portfolYOU/blog/using-keras-to-build-50-layer-residual-networks-for-image-recognition",
+      "date"     : "2020-02-15 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Using TensorFlow for Sign Language Recognition",
+      "category" : "",
+      "tags"     : "TensorFlow, CNN",
+      "url"      : "/portfolYOU/blog/using-tensorflow-for-sign-language-recognition",
+      "date"     : "2019-12-05 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Methods to Improve Neural Network Performance",
+      "category" : "",
+      "tags"     : "NN, regularization, dropout, optimization",
+      "url"      : "/portfolYOU/blog/methods-to-improve-neural-network-performance",
+      "date"     : "2019-10-01 00:00:00 -0400"
+    } ,
+  
+    {
       "title"    : "Cat vs Non-cat Image Classification",
       "category" : "",
       "tags"     : "Classification, Neural Network",
@@ -9,83 +89,43 @@
     } ,
   
     {
-      "title"    : "Digital Minimalism",
+      "title"    : "Bootstrap Review",
       "category" : "",
-      "tags"     : "Social Media, Minimalism, Technology",
-      "url"      : "/portfolYOU/blog/digital-minimalism",
-      "date"     : "2019-02-20 00:00:00 -0500"
-    } ,
-  
-    {
-      "title"    : "Learn React.js in 5 minutes",
-      "category" : "",
-      "tags"     : "React, JavaScript, Web Development",
-      "url"      : "/portfolYOU/blog/learn-react-js",
+      "tags"     : "Bootstrap, Web Development",
+      "url"      : "/portfolYOU/blog/Bootstrap-review",
       "date"     : "2019-02-15 00:00:00 -0500"
     } ,
   
     {
-      "title"    : "Clean Coding",
+      "title"    : "HTML Review",
       "category" : "",
-      "tags"     : "Software Development, Clean Code",
-      "url"      : "/portfolYOU/blog/clean-coding",
-      "date"     : "2018-12-10 00:00:00 -0500"
+      "tags"     : "HTML, Web Development",
+      "url"      : "/portfolYOU/blog/HTML-review",
+      "date"     : "2019-02-05 00:00:00 -0500"
     } ,
   
     {
-      "title"    : "What the heck is a Callback?",
+      "title"    : "CSS Review",
       "category" : "",
-      "tags"     : "JavaScript, Nodejs, Web Development",
-      "url"      : "/portfolYOU/blog/what-the-heck-is-a-callback",
-      "date"     : "2018-12-01 00:00:00 -0500"
+      "tags"     : "Web Development, CSS",
+      "url"      : "/portfolYOU/blog/CSS-review",
+      "date"     : "2019-02-02 00:00:00 -0500"
     } ,
   
     {
-      "title"    : "4 Lessons After 11 Years in Silicon Valley",
+      "title"    : "WANG Yangming’s life and work",
       "category" : "",
-      "tags"     : "",
-      "url"      : "/portfolYOU/blog/four-lessons-after-eleven-years-in-silicon-valley",
-      "date"     : "2018-05-09 00:00:00 -0400"
+      "tags"     : "TensorFlow, CNN",
+      "url"      : "/portfolYOU/blog/WANG-Yangming-s-life-and-work",
+      "date"     : "2019-01-29 00:00:00 -0500"
     } ,
   
     {
-      "title"    : "GitHub Flow",
+      "title"    : "GitHub Commands Summary",
       "category" : "",
-      "tags"     : "GitHub, Workflow",
-      "url"      : "/portfolYOU/blog/github-flow",
-      "date"     : "2017-01-01 00:00:00 -0500"
-    } ,
-  
-    {
-      "title"    : "A better Hello World",
-      "category" : "",
-      "tags"     : "Software Development",
-      "url"      : "/portfolYOU/blog/a-better-hello-world",
-      "date"     : "2016-07-23 00:00:00 -0400"
-    } ,
-  
-    {
-      "title"    : "Do not go gentle into that good night",
-      "category" : "",
-      "tags"     : "Poetry",
-      "url"      : "/portfolYOU/blog/do-not-go-gentle-into-that-good-night",
-      "date"     : "2016-04-17 00:00:00 -0400"
-    } ,
-  
-    {
-      "title"    : "What is version control?",
-      "category" : "",
-      "tags"     : "Version Control",
-      "url"      : "/portfolYOU/blog/what-is-version-control",
-      "date"     : "2016-02-09 00:00:00 -0500"
-    } ,
-  
-    {
-      "title"    : "How to undo your git failure?",
-      "category" : "",
-      "tags"     : "External Post, Git",
-      "url"      : "https://blog.usejournal.com/how-to-undo-your-git-failure-b76e31ecac74",
-      "date"     : "2015-09-25 00:00:00 -0400"
+      "tags"     : "GitHub, Git, Terminal, Commands",
+      "url"      : "/portfolYOU/blog/GitHub-commands-summary",
+      "date"     : "2019-01-01 00:00:00 -0500"
     } 
   
 ]

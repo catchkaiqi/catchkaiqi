@@ -1,0 +1,15 @@
+- name: English (advanced)
+  percentage: 80
+  color: info
+
+- name: Mandarin (advanced)
+  percentage: 80
+  color: success
+
+- name: French
+  percentage: 30
+  color: danger
+
+- name: Japanese
+  percentage: 30
+  color: primary

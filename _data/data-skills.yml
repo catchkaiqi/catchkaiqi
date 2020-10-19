@@ -1,0 +1,15 @@
+- name: TensorFlow
+  percentage: 80
+  color: info
+
+- name: PyTorch
+  percentage: 80
+  color: success
+
+- name: Keras
+  percentage: 80
+  color: warning
+
+- name: Pandas, NumPy, Re, NTLK, OpenCV
+  percentage: 80
+  color: danger

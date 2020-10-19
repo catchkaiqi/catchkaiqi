@@ -1,7 +1,16 @@
 - name: Adobe Photoshop
-  percentage: 95
-  color: info
-
-- name: Adobe Illustrator
-  percentage: 90
+  percentage: 60
   color: success
+
+- name: Adobe Photoshop
+  percentage: 60
+  color: warning
+
+- name: Autodesk
+  percentage: 50
+  color: primary
+
+- name: Arduino
+  percentage: 50
+  color: dark
+

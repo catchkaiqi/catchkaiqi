@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="I turn coffee :coffee: into code, use tabs over spaces and never broke production.">
+
+  <title>portfolYOU</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/portfolYOU/assets/favicon.ico">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" type="text/css"/>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/portfolYOU/assets/css/style.css" type="text/css">
+
+</head>
+
+
+<body class="d-flex flex-column h-100">
+
+  <main class="flex-shrink-0 container mt-5">
+  <nav class="navbar navbar-expand-lg navbar-light">
+
+  <a class="navbar-brand" href="/portfolYOU/"><h5><b>portfolYOU</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+<a class="nav-item nav-link " href="/portfolYOU/projects/">Projects</a>
+
+      <a class="nav-item nav-link active" href="/portfolYOU/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/portfolYOU/about/">About</a>
+
+      
+
+    </div>
+  </div>
+
+</nav>
+  <div class="col-lg-10 mx-auto mt-5 post">
+  <h1><b>Methods to Improve Neural Network Performance</b></h1>
+
+<p class="post-metadata text-muted">
+  01 October 2019 -  
+  <b>3 mins read time</b>
+
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/portfolYOU/blog/tags#nn">
+      <span class="tag badge badge-pill text-primary border border-primary">NN</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/portfolYOU/blog/tags#regularization">
+      <span class="tag badge badge-pill text-primary border border-primary">regularization</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/portfolYOU/blog/tags#dropout">
+      <span class="tag badge badge-pill text-primary border border-primary">dropout</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/portfolYOU/blog/tags#optimization">
+      <span class="tag badge badge-pill text-primary border border-primary">optimization</span>
+    </a>
+    </p>
+
+<p>There are several ways such as good initialization, gradient checking, regularization, and different optimization methods to improve neural network performance.</p>
+<ul>
+  <li>A well-chosen initialization can:
+1	Speed up the convergence of gradient descent
+2	Increase the odds of gradient descent converging to a lower training (and generalization) error
+¥	Here are the three initialization methods:
+1	Zeros initialization – setting initialization = “zeros” in the input argument.
+2	Random initialization – setting initialization = “random” in the input argument. This initializes the weights to large random values. 
+3	He initialization – setting initialization = “he” in the input argument. This initializes the weights to random values scaled according to a paper by He et al., 2015.
+After trying three different types of initializations. For the same number of iterations and same hyperparameters the comparison is:</li>
+</ul>
+<figure class="figure w-100">
+  <img src="../assets/img/blogmethodsto.jpg" class="figure-img img-fluid rounded" alt="iOS"><figcaption class="figure-caption text-center">iOS</figcaption></figure>
+
+<p>Gradient checking method verifies closeness between the gradients from backpropagation and the numerical approximation of the gradient (computed using forward propagation). Since Gradient checking is slow, so we don’t run it in every iteration of training. We usually run it only to make sure the code is correct, then turn it off and use backpropagation for the actual learning process.</p>
+<figure class="figure w-100">
+  <img src="../assets/img/blogmethodsto1.jpg" class="figure-img img-fluid rounded" alt="iOS"><figcaption class="figure-caption text-center">iOS</figcaption></figure>
+
+<p>Gradient Checking, at least as we’ve presented it, doesn’t work with dropout. We would usually run the gradient check algorithm without dropout to make sure your backpropagation is correct, then add dropout.</p>
+
+<p>To reduce overfitting of the model, we added regularization terms. In this case, I compared the performances of a 3-layer neural network model without regularization, with L2 regularization, and dropout.</p>
+<ul>
+  <li>L2 Regularization</li>
+</ul>
+<figure class="figure w-100">
+  <img src="../assets/img/blogmethodsto2.jpg" class="figure-img img-fluid rounded" alt="iOS"><figcaption class="figure-caption text-center">iOS</figcaption></figure>
+
+<ul>
+  <li> Dropout is a widely used regularization technique, it randomly shuts down some neurons in each iteration. Deep learning frameworks like tensorflow, PaddlePaddle, keras or caffe come with a dropout layer implementation.
+Note that regularization hurts training set performance! This is because it limits the ability of the network to overfit to the training set. But since it ultimately gives better test accuracy, it is helping your system.</li>
+</ul>
+<figure class="figure w-100">
+  <img src="../assets/img/blogmethodsto3.jpg" class="figure-img img-fluid rounded" alt="iOS"><figcaption class="figure-caption text-center">iOS</figcaption></figure>
+
+<p>For the optimization methods, we compare the performances using Batch Gradient Descent, Mini-Batch Gradient descent, Momentum, and Adam optimizations.
+A simple optimization method in machine learning is gradient descent (GD). When we take gradient steps with respect to all examples on each step, it is also called Batch Gradient Descent. A variant of this is Stochastic Gradient Descent (SGD), which is equivalent to mini-batch gradient descent where each mini-batch has just 1 example.</p>
+<figure class="figure w-100">
+  <img src="../assets/img/blogmethodsto4.jpg" class="figure-img img-fluid rounded" alt="iOS"><figcaption class="figure-caption text-center">iOS</figcaption></figure>
+
+<figure class="figure w-100">
+  <img src="../assets/img/blogmethodsto5.jpg" class="figure-img img-fluid rounded" alt="iOS"><figcaption class="figure-caption text-center">iOS</figcaption></figure>
+
+<ul>
+  <li>Momentum stores the ‘direction’ of the previous gradients in the variable. Formally, this will be the exponentially weighted average of the gradient on previous steps.</li>
+</ul>
+<figure class="figure w-100">
+  <img src="../assets/img/blogmethodsto6.jpg" class="figure-img img-fluid rounded" alt="iOS"><figcaption class="figure-caption text-center">iOS</figcaption></figure>
+
+<p>for l = 1,…, L
+where L is the number of layers, beta is the momentum and alpha is the learning rate. All parameters should be stored in the parameters dictionary. Note that the iterator l starts at 0 in the for loop while the first parameters are W[l]  and b[l] (that’s a “one” on the superscript).
+The larger the momentum beta is, the smoother the update because the more we take the past gradients into account. But if it is too big, it could also smooth out the updates too much. Common values for beta range from 0.8 to 0.999. If you don’t feel inclined to tune this,  is often a reasonable default.</p>
+
+<ul>
+  <li>Adam optimization</li>
+</ul>
+<figure class="figure w-100">
+  <img src="../assets/img/blogmethodsto7.jpg" class="figure-img img-fluid rounded" alt="iOS"><figcaption class="figure-caption text-center">iOS</figcaption></figure>
+
+<p>The summary of three optimizations is in the following chart. Adam outperforms mini-batch gradient descent and Momentum. If we run the model for more epochs on this simple dataset, all three methods will lead to very good results. However, we will see that Adam converges a lot faster.</p>
+<figure class="figure w-100">
+  <img src="../assets/img/blogmethodsto8.jpg" class="figure-img img-fluid rounded" alt="iOS"><figcaption class="figure-caption text-center">iOS</figcaption></figure>
+
+
+
+</div>
+  </main>
+
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Kaiqi Cheng</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center">
+<a class="social mx-1" href="https://www.behance.net/your_username" style="color: #6c757d" onmouseover="this.style.color='#1769ff'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-behance fa-1x"></i>
+    </a><a class="social mx-1" href="mailto:catchkaiqi@gmail.com" style="color: #6c757d" onmouseover="this.style.color='#db4437'" onmouseout="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.facebook.com/your_username" style="color: #6c757d" onmouseover="this.style.color='#3b5998'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.github.com/catchcheng" style="color: #6c757d" onmouseover="this.style.color='#333333'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.linkedin.com/in/your_username" style="color: #6c757d" onmouseover="this.style.color='#007bb5'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a><a class="social mx-1" href="https://medium.com/@your_username" style="color: #6c757d" onmouseover="this.style.color='#00ab6c'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-medium fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.twitter.com/your_username" style="color: #6c757d" onmouseover="this.style.color='#1da1f2'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-twitter fa-1x"></i>
+    </a>
+
+</div>
+<small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+  
+</footer>
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+</body>
+
+</html>
